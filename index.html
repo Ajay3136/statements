@@ -46,6 +46,15 @@ svg{stroke:var(--link);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-li
 .flt{height:44px;padding:0 22px;border-radius:22px;background:#0d1a3a;border:1px solid #1d2c55;display:grid;place-items:center;font-size:18px;font-weight:600}
 .sort{text-align:right;margin:22px 16px 18px;color:#4a8fd6;font-weight:600;font-size:16px}
 .txc{margin:0 16px;background:#121933;border-radius:26px;padding:0 18px}
+.list .row,.acts>div,.back,.flt,.hd a,.sort,.tx{transition:background-color .35s ease,opacity .35s ease,transform .35s ease;-webkit-user-select:none;user-select:none;cursor:pointer}
+.list .row{border-radius:16px}
+.list .row:active,.list .row.pr{background:rgba(255,255,255,.12);transition:none}
+.acts>div:active,.back:active,.flt:active{opacity:.55;transform:scale(.96);transition:none}
+.tx:active{background:rgba(255,255,255,.07);transition:none}
+.hd a:active,.sort:active{opacity:.4;transition:none}
+@keyframes inR{from{transform:translateX(28%);opacity:0}to{transform:none;opacity:1}}
+@keyframes inL{from{transform:translateX(-12%);opacity:0}to{transform:none;opacity:1}}
+.inR{animation:inR .32s cubic-bezier(.2,.8,.2,1)}.inL{animation:inL .32s cubic-bezier(.2,.8,.2,1)}
 </style></head><body>
 <div class="phone" id="home">
  <div class="back"><svg width="22" height="22" viewBox="0 0 24 24" style="stroke:#fff;stroke-width:2.4"><path d="M15 5l-7 7 7 7"/></svg></div>
@@ -65,9 +74,15 @@ svg{stroke:var(--link);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-li
   <div class="row"><svg width="46" height="46" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.200"/><path d="M10.300 3h3.400l.5 2.300 1.500.8 2.200-.8 1.700 2.900-1.700 1.600v1.700l1.700 1.600-1.700 2.900-2.200-.8-1.500.9-.5 2.300h-3.400l-.5-2.300-1.500-.9-2.200.8-1.700-2.900 1.700-1.600v-1.700L4.400 8.200l1.700-2.900 2.200.8 1.500-.8z" transform="rotate(0 12 12)"/></svg><span>Account and settings</span><svg width="26" height="26" viewBox="0 0 24 24" style="stroke:#9aa"><path d="M9 5l7 7-7 7"/></svg></div></div>
 </div><div class="phone" id="act" style="display:none"><div class="ah"><div class="back" id="ab"><svg width="22" height="22" viewBox="0 0 24 24" style="stroke:#fff;stroke-width:2.4"><path d="M15 5l-7 7 7 7"/></svg></div><div class="t">10 Oct - 09 Nov<small>Card Ending - 71003</small></div><div class="flt">Filter (1)</div></div><div class="sort">Sort by: Most Recent</div><div class="txc"><div class="tx"><div><p>INTEREST</p><small>09 Nov 2026</small></div><b>$94.70</b></div><div class="tx"><div><p>BELL MEDIA TORONTO</p><small>06 Nov 2026</small></div><b>$9.12</b></div><div class="tx"><div><p>CINEPLEX #8030 WEB<br>QP TORONTO</p><small>04 Nov 2026</small></div><b>$15.00</b></div><div class="tx"><div><p>UBER EATS TORONTO</p><small>02 Nov 2026</small></div><b>$18.75</b></div><div class="tx"><div><p>UBER ONE MEMBERSHIP<br>TORONTO</p><small>25 Oct 2026</small></div><b>$11.29</b></div><div class="tx"><div><p>HCM=QUEENS VARIETY<br>00-0 BRAMPTON</p><small>14 Oct 2026</small></div><b>$5.10</b></div><div class="tx"><div><p>01767 CIRCLE K BRAMPTON</p><small>13 Oct 2026</small></div><b>$4.17</b></div><div class="tx"><div><p>BGD DAIRY FRESH 001 BRAMPTON</p><small>13 Oct 2026</small></div><b>$17.00</b></div><div class="tx"><div><p>YULZA - LDG - HP Montre Dorval</p><small>12 Oct 2026</small></div><b>$297.28</b></div><div class="tx"><div><p>PETRO-CANADA 30584<br>PORT HOPE</p><small>11 Oct 2026</small></div><b>$50.00</b></div><div class="tx"><div><p>PETRO-CANADA<br>30592 MORRISBURG</p><small>11 Oct 2026</small></div><b>$50.00</b></div></div></div>
 <script>
-function v(){var a=location.hash==="#activity";document.getElementById("home").style.display=a?"none":"";document.getElementById("act").style.display=a?"":"none";window.scrollTo(0,0)}
-document.getElementById("pa").onclick=function(){location.hash="activity"};
-document.getElementById("ab").onclick=function(){location.hash=""};
+document.addEventListener("touchstart",function(){},true);
+var last="";
+function v(){var a=location.hash==="#activity",h=document.getElementById("home"),c=document.getElementById("act");
+h.style.display=a?"none":"";c.style.display=a?"":"none";
+var t=a?c:h;t.classList.remove("inR","inL");void t.offsetWidth;t.classList.add(a?"inR":"inL");window.scrollTo(0,0)}
+function go(h){location.hash=h}
+var pa=document.getElementById("pa");
+pa.onclick=function(){pa.classList.add("pr");setTimeout(function(){go("activity");pa.classList.remove("pr")},140)};
+document.getElementById("ab").onclick=function(){setTimeout(function(){go("")},100)};
 window.addEventListener("hashchange",v);v();
 </script>
 </body></html>
