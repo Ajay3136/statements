@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Statements"><meta name="theme-color" content="#020a1d"><link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAACiUlEQVR4nO3dwW0UQRBAUWxxQBADRyIhG+5EwZ1siMRxIHHk4IuF+JLFblXvovcSaKv9p9qzWs88PL7/+Ab+5vH0D8DtEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHCRxkMRBEgdJHKS3B9d+9+XHwdXvyK/vn4+s+7D/AkBN/LPlSraPFWVcYnn39iaHLK5oZ4QsTQ5lXNfOfm7EoYwJC7vqVpY0HoexMWd6b2fjUMa00R12rJDEQRqMw5myY26fTQ6SOEjiIImDJA6SOEgHvuzDvTA5SOIgiYMkDpI4SOIgiYMkDpI4SOIgiYMkDpI4SOIgDT68xbfP1wz9073JQRIHSRwkcZDEQRIHSRwkcZDEQRIHSRwkcZDEQRIH6eT7Vl76+e3TzkIfvj7tLPQfOB/HWhYvl5PIazhWSIfjWB4bx9e9LyYHSRwkcZDEQTocx6lbSreyr2FykM5/CPZ8EfuE9Aadj+OZ39kNcqyQxEESB0kcJHGQxEEajGPoiSL8YW6fTQ6SOEizcThZpo3u8Pjk0Mec6b11rJA24jA8Jizs6tLk0Md17ezn9ntlPbn2QpuX2fbfHEbIJZZ37+QbqU2RVzp1RXldOcmtLEkcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcJHGQxEESB0kcpN/+6EvoIHoueQAAAABJRU5ErkJggg=="><title>Statements</title>
+<style>
+:root{box-sizing:border-box;--bg:#020a1d;--card:#0f1c3d;--card2:#27325a;--blue:#0a74da;--link:#4aa8ff;--mut:#c4c9d8;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html,body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;background:var(--bg);color:#fff;font-family:-apple-system,"SF Pro Text",Inter,Helvetica,Arial,sans-serif}
+.phone{max-width:430px;margin:0 auto;min-height:100vh;position:relative;padding-bottom:140px}
+.status{position:sticky;top:0;z-index:10;height:54px;background:var(--bg);display:flex;align-items:center;justify-content:space-between;padding:8px 22px 0 21px;font-weight:600;font-size:17px}
+.island{position:absolute;left:50%;top:11px;transform:translateX(-50%);width:120px;height:34px;border-radius:20px;background:#000;display:flex;align-items:center;justify-content:center}
+.rec{width:10px;height:10px;border-radius:50%;background:#ff2d2d;animation:p 1.2s infinite}
+@keyframes p{50%{opacity:.35}}
+.sr{display:flex;gap:6px;align-items:center}
+.bat{position:relative;width:34px;height:22px;border-radius:7px;background:linear-gradient(90deg,#f5d000 0 38%,#6e6e73 38%);color:#111;font-size:15px;font-weight:700;display:grid;place-items:center;margin-right:4px}.bat::after{content:"";position:absolute;right:-4px;top:7px;width:2px;height:8px;border-radius:0 2px 2px 0;background:#6e6e73}
+.back{margin:calc(env(safe-area-inset-top,0px) + 20px) 0 0 16px;width:44px;height:44px;border-radius:50%;background:#0d1a3a;border:1px solid #1d2c55;display:grid;place-items:center}
+h1{font-size:30px;font-weight:700;margin:22px 16px 14px}
+.bal{margin:0 16px;background:var(--card);border-radius:18px;padding:18px 20px;position:relative}
+.bal small{color:var(--mut);font-size:17px}
+.bal b{display:block;font-size:34px;margin:4px 0}
+.bal span{font-size:17px}
+.bal>svg{position:absolute;right:20px;top:50%}
+.hd{display:flex;justify-content:space-between;align-items:center;margin:32px 16px 14px}
+.hd h2{font-size:19px}.hd a{color:var(--link);font-weight:600;font-size:17px}
+.car{display:flex;gap:10px;padding:0 0 0 0;margin-left:-14px}
+.peek{flex:0 0 14px;background:var(--card2);border-radius:0 18px 18px 0;opacity:.8}
+.peek.r{border-radius:18px 0 0 18px;margin-left:0}
+.stmt{flex:1;background:var(--card2);border-radius:26px;padding:26px 24px 24px;min-height:285px;display:flex;flex-direction:column}
+.stmt p{font-size:19px;font-weight:500}.stmt .l{color:var(--mut);margin-top:34px;font-weight:400}
+.stmt b{font-size:34px;display:block;margin-top:6px}
+.pay{margin-top:auto;background:var(--blue);border-radius:20px;padding:16px 18px;display:flex;align-items:center;gap:14px;font-size:17px;line-height:1.25}
+.pay div{flex:1}
+.dots{display:flex;gap:12px;justify-content:center;margin:16px 0 36px}
+.dots i{width:10px;height:10px;border-radius:50%;background:#8a8f9c}.dots i.a{background:var(--link)}
+.acts{display:flex;gap:16px;margin:0 16px}
+.acts div{flex:1;height:76px;border-radius:26px;background:#0b1a3f;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--link);font-weight:600;font-size:16px;text-align:center;line-height:1.15}
+.list{margin:30px 16px 0;background:var(--card);border-radius:22px;padding:0 16px}
+.row{display:flex;align-items:center;gap:20px;height:84px;font-size:22px}
+.row+.row{border-top:1px solid #26335c}
+.row span{flex:1}.row .c{color:#9aa}
+svg{stroke:var(--link);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+</style></head><body>
+<div class="phone">
+ <div class="back"><svg width="22" height="22" viewBox="0 0 24 24" style="stroke:#fff;stroke-width:2.4"><path d="M15 5l-7 7 7 7"/></svg></div>
+ <h1>Statements</h1>
+ <div class="bal"><small>Current Balance <img src="data:image/png;base64,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" alt="" style="height:22px;vertical-align:-5px;margin-left:6px"></small><b>$4,834.43</b><span>$166.57 Available Credit</span>
+  <svg width="26" height="26" viewBox="0 0 24 24" style="transform:translateY(-50%)"><path d="M5 9l7 7 7-7"/></svg></div>
+ <div class="hd"><h2>Transactions and Statements</h2><a>See All</a></div>
+ <div class="car"><div class="peek"></div>
+  <div class="stmt"><p>10 Oct - 9 Nov</p><p class="l">Balance due</p><b>$4,750.12</b>
+   <div class="pay"><svg width="34" height="34" viewBox="0 0 24 24" style="stroke:#fff"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5M12 7v5l3 2"/></svg><div>$0.00 minimum payment due on 04 Dec</div><svg width="22" height="22" viewBox="0 0 24 24" style="stroke:#fff;stroke-width:2.4"><path d="M9 5l7 7-7 7"/></svg></div></div>
+  <div class="peek r"></div></div>
+ <div class="dots"><i></i><i></i><i class="a"></i><i></i></div>
+ <div class="acts"><div><svg width="30" height="30" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M14.500 9.200c-.3-1-1.300-1.600-2.500-1.600-1.400 0-2.500.8-2.500 1.900 0 2.600 5 1.300 5 4 0 1.100-1.100 1.900-2.500 1.900-1.300 0-2.300-.6-2.600-1.700M12 6v1.600M12 16.400V18"/></svg>Make Payment</div>
+  <div><svg width="30" height="30" viewBox="0 0 24 24"><path d="M3 7h13v10H3zM16 10l5 2-5 2M10 8l-2 4h4l-2 4"/></svg>Spending Power</div>
+  <div><svg width="30" height="30" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>Search<br>Transactions</div></div>
+ <div class="list"><div class="row"><svg width="46" height="46" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 14l2 2 4-4"/></svg><span>Payment Activity</span><svg class="c" width="26" height="26" viewBox="0 0 24 24" style="stroke:#9aa"><path d="M9 5l7 7-7 7"/></svg></div>
+  <div class="row"><svg width="46" height="46" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.200"/><path d="M10.300 3h3.400l.5 2.300 1.500.8 2.200-.8 1.700 2.900-1.700 1.600v1.700l1.700 1.600-1.700 2.900-2.200-.8-1.500.9-.5 2.300h-3.400l-.5-2.300-1.500-.9-2.200.8-1.700-2.900 1.700-1.600v-1.700L4.400 8.200l1.700-2.900 2.200.8 1.500-.8z" transform="rotate(0 12 12)"/></svg><span>Account and settings</span><svg width="26" height="26" viewBox="0 0 24 24" style="stroke:#9aa"><path d="M9 5l7 7-7 7"/></svg></div></div>
+</div></body></html>
